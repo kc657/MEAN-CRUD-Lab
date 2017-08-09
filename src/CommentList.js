@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import Comment from './Comment';
-import style from './style';
+import React, { Component } from 'react'
+import Comment from './Comment'
+import style from './style'
 
 class CommentList extends Component {
-  render() {
+  render () {
     let commentNodes = this.props.data.map(comment => {
       return (
-        <Comment author={ comment.author } key={ comment['_id'] }>
+        <Comment author={comment.author} key={comment['_id']}>
           { comment.text}
         </Comment>
       )
     })
     return (
-      <div style={ style.commentList }>
+      <div style={style.commentList}>
         { commentNodes }
       </div>
     )
   }
 }
 
-export default CommentList;
+export default CommentList

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import style from './style'
-import $ from 'jquery-ajax';
+import $ from 'jquery-ajax'
 
 class CommentForm extends Component {
   constructor () {
