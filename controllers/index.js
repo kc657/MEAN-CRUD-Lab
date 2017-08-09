@@ -1,4 +1,3 @@
 module.exports = {
-  comments: require('./commentControllers.js'),
-  nuke: require('./nukeControllers.js')
+  comments: require('./commentControllers.js')
 }
