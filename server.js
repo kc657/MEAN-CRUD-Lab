@@ -7,7 +7,7 @@ let express = require('express'),
 
 // create instances
 let app = express(),
-    router = express.Router()
+  router = express.Router()
 
 // set port to env or 3000
 let port = process.env.API_PORT || 3001
@@ -39,15 +39,16 @@ app.get('/', function homepage (req, res) {
   res.sendFile('./public/index.html', ({root: __dirname}))
 })
 
+// getting all comments
 app.get('/comments', controllers.comments.show)
 
-//posting new comments
+// posting new comments
 app.post('/comments', controllers.comments.postComments)
 
-//update comment
+// update one comment
 app.put('/comments/:commentId', controllers.comments.updateComment)
 
-//delete comment
+// delete one comment
 app.delete('/comments/:commentId', controllers.comments.deleteComment)
 
 // start server
